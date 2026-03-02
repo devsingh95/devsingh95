@@ -201,7 +201,7 @@ hobbies:
 
 | Platform | Profile |
 |:--------:|:-------:|
-| <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"/> | [**devsingh95**](https://leetcode.com/devsingh95/) |
+| <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"/> | [**nucleon010**](https://leetcode.com/u/nucleon010/) |
 | <img src="https://img.shields.io/badge/GeeksforGeeks-2F8D46?style=for-the-badge&logo=geeksforgeeks&logoColor=white" alt="GFG"/> | [**devsingh95**](https://www.geeksforgeeks.org/user/devsingh95/) |
 | <img src="https://img.shields.io/badge/HackerRank-00EA64?style=for-the-badge&logo=hackerrank&logoColor=black" alt="HackerRank"/> | [**devsingh95**](https://www.hackerrank.com/devsingh95/) |
 
