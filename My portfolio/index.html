@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dev Singh — C++ Developer, DSA Specialist, Full Stack Engineer & AI/ML Explorer. Elite developer portfolio.">
+    <meta name="keywords" content="Dev Singh, Developer, Portfolio, C++, DSA, Full Stack, AI, ML, Computer Science">
+    <meta name="author" content="Dev Singh">
+    <title>Dev Singh | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ===== PRELOADER ===== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-orbit">
+                <div class="orbit-ring orbit-ring-1"></div>
+                <div class="orbit-ring orbit-ring-2"></div>
+                <div class="orbit-ring orbit-ring-3"></div>
+                <div class="orbit-core"></div>
+            </div>
+            <div class="preloader-text">
+                <span class="preloader-name">&lt;Dev.Singh /&gt;</span>
+                <div class="preloader-bar">
+                    <div class="preloader-fill" id="preloaderFill"></div>
+                </div>
+                <span class="preloader-percent" id="preloaderPercent">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== NOISE OVERLAY ===== -->
+    <div class="noise-overlay"></div>
+
+    <!-- ===== SCROLL PROGRESS ===== -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ===== CUSTOM CURSOR ===== -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- ===== PARTICLE CANVAS ===== -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- ===== SIDE NAVIGATION DOTS ===== -->
+    <div class="side-nav" id="sideNav">
+        <a href="#hero" class="side-dot active" data-section="hero"><span>Home</span></a>
+        <a href="#about" class="side-dot" data-section="about"><span>About</span></a>
+        <a href="#skills" class="side-dot" data-section="skills"><span>Skills</span></a>
+        <a href="#projects" class="side-dot" data-section="projects"><span>Projects</span></a>
+        <a href="#experience" class="side-dot" data-section="experience"><span>Experience</span></a>
+        <a href="#certifications" class="side-dot" data-section="certifications"><span>Certs</span></a>
+        <a href="#contact" class="side-dot" data-section="contact"><span>Contact</span></a>
+    </div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" fill="none">
+                        <path d="M20 4L4 12v16l16 8 16-8V12L20 4z" stroke="url(#logoGrad)" stroke-width="1.5" fill="none"/>
+                        <path d="M20 8l-12 6v12l12 6 12-6V14L20 8z" stroke="url(#logoGrad)" stroke-width="0.5" fill="rgba(59,130,246,0.05)"/>
+                        <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#3B82F6"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs>
+                    </svg>
+                </div>
+                <span class="logo-text"><span class="logo-bracket">&lt;</span>Dev<span class="logo-dot">.</span>Singh<span class="logo-bracket">/&gt;</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link"><span class="nav-link-num">01.</span>About</a></li>
+                <li><a href="#skills" class="nav-link"><span class="nav-link-num">02.</span>Skills</a></li>
+                <li><a href="#projects" class="nav-link"><span class="nav-link-num">03.</span>Projects</a></li>
+                <li><a href="#experience" class="nav-link"><span class="nav-link-num">04.</span>Experience</a></li>
+                <li><a href="#certifications" class="nav-link"><span class="nav-link-num">05.</span>Certs</a></li>
+                <li><a href="#contact" class="nav-link nav-link-cta"><span>Let's Talk</span><i class="fas fa-arrow-right"></i></a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://github.com/devsingh95" target="_blank" class="nav-github" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="hero-grid-bg"></div>
+        <div class="hero-aurora"></div>
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+        <div class="hero-glow hero-glow-3"></div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span class="badge-text">Available for Internships & Opportunities</span>
+            </div>
+
+            <div class="hero-name-wrapper">
+                <span class="hero-greeting">Hello, I'm</span>
+                <h1 class="hero-name" id="heroName">
+                    <span class="name-line"><span class="char-wrap"><span class="char">D</span></span><span class="char-wrap"><span class="char">E</span></span><span class="char-wrap"><span class="char">V</span></span></span>
+                    <span class="name-line"><span class="char-wrap"><span class="char">S</span></span><span class="char-wrap"><span class="char">I</span></span><span class="char-wrap"><span class="char">N</span></span><span class="char-wrap"><span class="char">G</span></span><span class="char-wrap"><span class="char">H</span></span></span>
+                </h1>
+                <div class="hero-name-outline" aria-hidden="true">
+                    <span>DEV</span><span>SINGH</span>
+                </div>
+            </div>
+
+            <div class="hero-typing-wrapper">
+                <div class="typing-terminal">
+                    <div class="terminal-dots"><span></span><span></span><span></span></div>
+                    <div class="terminal-body">
+                        <span class="terminal-prompt">~/dev $</span>
+                        <span class="hero-typing" id="heroTyping"></span>
+                        <span class="typing-cursor">_</span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="hero-description">
+                Building scalable systems with <span class="text-highlight">clean logic</span> and <span class="text-highlight">intelligent design</span>.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary magnetic">
+                    <span class="btn-text">View My Work</span>
+                    <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                    <span class="btn-shine"></span>
+                </a>
+                <a href="resume.pdf" download class="btn btn-outline magnetic">
+                    <span class="btn-text">Download Resume</span>
+                    <span class="btn-icon"><i class="fas fa-download"></i></span>
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="stat-ring"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" class="stat-ring-bg"/><circle cx="40" cy="40" r="36" class="stat-ring-fill" data-percent="85"/></svg><div class="stat-inner"><span class="stat-number" data-count="12">0</span><span class="stat-plus">+</span></div></div>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-ring"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" class="stat-ring-bg"/><circle cx="40" cy="40" r="36" class="stat-ring-fill" data-percent="70"/></svg><div class="stat-inner"><span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span></div></div>
+                    <span class="stat-label">Tech Stacks</span>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-ring"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" class="stat-ring-bg"/><circle cx="40" cy="40" r="36" class="stat-ring-fill" data-percent="95"/></svg><div class="stat-inner"><span class="stat-number" data-count="3">0</span><span class="stat-plus">+</span></div></div>
+                    <span class="stat-label">Certifications</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <div class="scroll-line"><div class="scroll-line-inner"></div></div>
+            <span>SCROLL</span>
+        </div>
+
+        <div class="hero-social-strip">
+            <a href="https://github.com/devsingh95" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/dev-singh-aba1a4263" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:devsingh95577@gmail.com"><i class="fas fa-envelope"></i></a>
+            <div class="social-line"></div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section about" id="about">
+        <div class="section-bg-accent"></div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <div class="section-title-wrapper">
+                    <h2 class="section-title reveal-text">About <span class="gradient-text">Me</span></h2>
+                    <div class="section-line-animated"><div class="line-fill"></div></div>
+                </div>
+            </div>
+            <div class="about-grid">
+                <div class="about-visual reveal-left">
+                    <div class="about-terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-dots"><span style="background:#FF5F57"></span><span style="background:#FFBD2E"></span><span style="background:#28CA41"></span></div>
+                            <span class="terminal-title">developer.config</span>
+                        </div>
+                        <div class="terminal-code" id="aboutCode">
+                            <div class="code-line"><span class="ln">1</span><span class="code-keyword">const</span> <span class="code-var">developer</span> = {</div>
+                            <div class="code-line"><span class="ln">2</span>&nbsp;&nbsp;<span class="code-attr">name</span>: <span class="code-string">"Dev Singh"</span>,</div>
+                            <div class="code-line"><span class="ln">3</span>&nbsp;&nbsp;<span class="code-attr">title</span>: <span class="code-string">"Full Stack Engineer"</span>,</div>
+                            <div class="code-line"><span class="ln">4</span>&nbsp;&nbsp;<span class="code-attr">university</span>: <span class="code-string">"Chandigarh University"</span>,</div>
+                            <div class="code-line"><span class="ln">5</span>&nbsp;&nbsp;<span class="code-attr">degree</span>: <span class="code-string">"B.E. CSE (Data Science)"</span>,</div>
+                            <div class="code-line"><span class="ln">6</span>&nbsp;&nbsp;<span class="code-attr">graduation</span>: <span class="code-number">2028</span>,</div>
+                            <div class="code-line"><span class="ln">7</span>&nbsp;&nbsp;<span class="code-attr">skills</span>: [<span class="code-string">"C++"</span>, <span class="code-string">"Python"</span>, <span class="code-string">"DSA"</span>],</div>
+                            <div class="code-line"><span class="ln">8</span>&nbsp;&nbsp;<span class="code-attr">passion</span>: <span class="code-string">"AI/ML"</span>,</div>
+                            <div class="code-line"><span class="ln">9</span>&nbsp;&nbsp;<span class="code-keyword">build</span>() {</div>
+                            <div class="code-line"><span class="ln">10</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">return</span> <span class="code-string">"scalable systems"</span>;</div>
+                            <div class="code-line"><span class="ln">11</span>&nbsp;&nbsp;}</div>
+                            <div class="code-line"><span class="ln">12</span>};</div>
+                        </div>
+                    </div>
+                    <div class="float-chip float-chip-1"><i class="fas fa-graduation-cap"></i> Class of 2028</div>
+                    <div class="float-chip float-chip-2"><i class="fas fa-map-marker-alt"></i> Mohali, India</div>
+                    <div class="float-chip float-chip-3"><i class="fas fa-code"></i> 7.6 CGPA</div>
+                </div>
+                <div class="about-content reveal-right">
+                    <h3 class="about-heading">I craft <span class="gradient-text">digital experiences</span> that merge logic with creativity</h3>
+                    <p class="about-text">I'm a CS student at <strong>Chandigarh University</strong>, with a deep foundation in <strong>C++</strong>, <strong>DSA</strong>, and a relentless problem-solving mindset. I don't just write code — I engineer solutions that are clean, efficient, and scalable.</p>
+                    <p class="about-text">From optimized algorithms to <strong>Machine Learning</strong> and <strong>AI</strong>, every project pushes boundaries — building full-stack platforms, intelligent systems, or optimizing performance at scale.</p>
+                    <p class="about-text">I believe in <em>clean code as a craft</em>. My goal: systems that are maintainable, performant, and production-ready.</p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon"><i class="fas fa-bolt"></i></div>
+                            <div><h4>Problem Solver</h4><p>Strong DSA & algorithmic thinking</p></div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon"><i class="fas fa-layer-group"></i></div>
+                            <div><h4>Full Stack Builder</h4><p>End-to-end development capability</p></div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon"><i class="fas fa-brain"></i></div>
+                            <div><h4>AI/ML Explorer</h4><p>Machine learning & data analysis</p></div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon"><i class="fas fa-gem"></i></div>
+                            <div><h4>Clean Code</h4><p>Scalable & production-grade code</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <div class="section-title-wrapper">
+                    <h2 class="section-title reveal-text">Tech <span class="gradient-text">Arsenal</span></h2>
+                    <div class="section-line-animated"><div class="line-fill"></div></div>
+                </div>
+            </div>
+            <div class="skills-orbit-wrapper reveal-up">
+                <div class="skills-orbit">
+                    <div class="orbit-center"><span class="orbit-center-text">DEV</span><div class="orbit-pulse"></div></div>
+                    <div class="orbit-track orbit-track-1">
+                        <div class="orbit-item" style="--angle: 0deg" data-skill="C++"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"></div>
+                        <div class="orbit-item" style="--angle: 90deg" data-skill="Python"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"></div>
+                        <div class="orbit-item" style="--angle: 180deg" data-skill="JavaScript"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS"></div>
+                        <div class="orbit-item" style="--angle: 270deg" data-skill="SQL"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL"></div>
+                    </div>
+                    <div class="orbit-track orbit-track-2">
+                        <div class="orbit-item" style="--angle: 45deg" data-skill="Git"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"></div>
+                        <div class="orbit-item" style="--angle: 135deg" data-skill="HTML5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"></div>
+                        <div class="orbit-item" style="--angle: 225deg" data-skill="CSS3"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"></div>
+                        <div class="orbit-item" style="--angle: 315deg" data-skill="VS Code"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"></div>
+                    </div>
+                    <div class="orbit-track orbit-track-3">
+                        <div class="orbit-item" style="--angle: 20deg" data-skill="Pandas"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas"></div>
+                        <div class="orbit-item" style="--angle: 110deg" data-skill="NumPy"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy"></div>
+                        <div class="orbit-item" style="--angle: 200deg" data-skill="C"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C"></div>
+                        <div class="orbit-item" style="--angle: 290deg" data-skill="GitHub"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="invert-icon"></div>
+                    </div>
+                </div>
+                <div class="orbit-skill-label" id="orbitLabel">Hover to explore</div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-box reveal-up" style="--delay:0s"><div class="skill-box-border"></div><div class="skill-box-icon"><i class="fas fa-code"></i></div><h3>Languages</h3><div class="skill-box-tags"><span>C++</span><span>Python</span><span>C</span><span>SQL</span><span>JS</span></div><div class="skill-box-bar"><div class="bar-fill" data-width="90%"></div></div></div>
+                <div class="skill-box reveal-up" style="--delay:0.1s"><div class="skill-box-border"></div><div class="skill-box-icon"><i class="fas fa-microchip"></i></div><h3>Core CS</h3><div class="skill-box-tags"><span>DSA</span><span>OOPS</span><span>DBMS</span><span>OS</span></div><div class="skill-box-bar"><div class="bar-fill" data-width="85%"></div></div></div>
+                <div class="skill-box reveal-up" style="--delay:0.2s"><div class="skill-box-border"></div><div class="skill-box-icon"><i class="fas fa-globe"></i></div><h3>Web Dev</h3><div class="skill-box-tags"><span>HTML5</span><span>CSS3</span><span>JS</span><span>Backend</span></div><div class="skill-box-bar"><div class="bar-fill" data-width="80%"></div></div></div>
+                <div class="skill-box reveal-up" style="--delay:0.3s"><div class="skill-box-border"></div><div class="skill-box-icon"><i class="fas fa-brain"></i></div><h3>AI / ML</h3><div class="skill-box-tags"><span>ML</span><span>Pandas</span><span>NumPy</span><span>Data Analysis</span></div><div class="skill-box-bar"><div class="bar-fill" data-width="75%"></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section projects" id="projects">
+        <div class="section-bg-accent"></div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <div class="section-title-wrapper">
+                    <h2 class="section-title reveal-text">Featured <span class="gradient-text">Projects</span></h2>
+                    <div class="section-line-animated"><div class="line-fill"></div></div>
+                </div>
+            </div>
+            <div class="project-featured reveal-up">
+                <div class="project-featured-visual">
+                    <div class="featured-mockup">
+                        <div class="mockup-browser"><div class="mockup-dots"><span></span><span></span><span></span></div><div class="mockup-url">agroguard-ai.dev</div></div>
+                        <div class="mockup-screen"><div class="mockup-content"><div class="mock-nav"></div><div class="mock-hero-block"></div><div class="mock-cards"><div class="mock-card"></div><div class="mock-card"></div><div class="mock-card"></div></div></div></div>
+                    </div>
+                    <div class="featured-glow"></div>
+                </div>
+                <div class="project-featured-info">
+                    <span class="project-label">Featured Project</span>
+                    <h3 class="project-featured-title">AgroGuard-AI</h3>
+                    <div class="project-featured-desc"><p>AI-based agricultural monitoring solution leveraging machine learning to analyze crop health, detect diseases, and provide actionable insights for farmers.</p></div>
+                    <div class="project-tags"><span>Python</span><span>AI/ML</span><span>Data Analysis</span><span>Agriculture</span></div>
+                    <div class="project-featured-links"><a href="https://github.com/devsingh95/AgroGuard-AI" target="_blank" class="btn btn-outline btn-sm magnetic"><i class="fab fa-github"></i><span>Source Code</span></a></div>
+                </div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card reveal-up" style="--delay:0s"><div class="project-card-inner"><div class="project-card-shine"></div><div class="project-number">01</div><div class="project-header"><div class="project-icon"><i class="fas fa-hospital"></i></div><a href="https://github.com/devsingh95/Ai-Hospital-Management" target="_blank" class="project-link"><i class="fab fa-github"></i></a></div><h3 class="project-title">AI Hospital Management</h3><p class="project-description">Smart hospital platform powered by AI. Streamlines patient records, scheduling, and resource allocation.</p><div class="project-tags"><span>Python</span><span>AI</span><span>Database</span></div></div></div>
+                <div class="project-card reveal-up" style="--delay:0.1s"><div class="project-card-inner"><div class="project-card-shine"></div><div class="project-number">02</div><div class="project-header"><div class="project-icon"><i class="fas fa-wallet"></i></div><a href="https://github.com/devsingh95/Expense-Tracker-Using-Java" target="_blank" class="project-link"><i class="fab fa-github"></i></a></div><h3 class="project-title">Expense Tracker</h3><p class="project-description">Personal finance tracking with Java. Expense categorization, budget monitoring & insights.</p><div class="project-tags"><span>Java</span><span>OOPS</span><span>Finance</span></div></div></div>
+                <div class="project-card project-card-wide reveal-up" style="--delay:0.2s"><div class="project-card-inner"><div class="project-card-shine"></div><div class="project-number">03</div><div class="project-card-img">
+                    <div class="dash-mockup">
+                      <div class="dash-topbar">
+                        <div class="dash-logo"><span class="dash-logo-icon">&#127860;</span> <span class="dash-brand">Ann-<span style="color:#22C55E">Sanjivani AI</span></span></div>
+                        <div class="dash-nav-pills"><span class="active">Dashboard</span><span>Live Map</span><span>Impact</span><span>AI Demo</span></div>
+                        <div class="dash-actions"><span class="dash-btn-mark">&#127860; Mark Surplus</span></div>
+                      </div>
+                      <div class="dash-title">Live Dashboard</div>
+                      <div class="dash-subtitle">Real-time food rescue operations across Mumbai</div>
+                      <div class="dash-stats-row">
+                        <div class="dash-stat"><span class="ds-val">5,209.3 kg</span><span class="ds-lbl">Total Food Saved</span></div>
+                        <div class="dash-stat dash-stat-hl"><span class="ds-val">20,827+</span><span class="ds-lbl">Meals Served</span></div>
+                        <div class="dash-stat"><span class="ds-val">13,023.4 kg</span><span class="ds-lbl">CO₂ Prevented</span></div>
+                        <div class="dash-stat"><span class="ds-val">₹520,930</span><span class="ds-lbl">Money Saved</span></div>
+                      </div>
+                      <div class="dash-stats-row dash-stats-sm">
+                        <div class="dash-stat-mini"><strong>8</strong> Active Orders</div>
+                        <div class="dash-stat-mini"><strong>142.5 kg</strong> Today Saved</div>
+                        <div class="dash-stat-mini"><strong>28.5 min</strong> Avg Delivery</div>
+                        <div class="dash-stat-mini"><strong>827</strong> Today Meals</div>
+                      </div>
+                    </div>
+                  </div><div class="project-header"><div class="project-icon"><i class="fas fa-utensils"></i></div><a href="https://github.com/devsingh95/FoodRescue-by-Dev" target="_blank" class="project-link"><i class="fab fa-github"></i></a></div><h3 class="project-title">Ann-Sanjivani AI</h3><p class="project-description">AI-powered food rescue platform with live dashboard, real-time delivery tracking, impact analytics & surplus management across Mumbai.</p><div class="project-tags"><span>AI/ML</span><span>Full Stack</span><span>Dashboard</span><span>Social Impact</span></div></div></div>
+                <div class="project-card reveal-up" style="--delay:0.3s"><div class="project-card-inner"><div class="project-card-shine"></div><div class="project-number">04</div><div class="project-header"><div class="project-icon"><i class="fas fa-microphone"></i></div><a href="https://github.com/devsingh95/Python-code-for-speech-recognition-" target="_blank" class="project-link"><i class="fab fa-github"></i></a></div><h3 class="project-title">Speech Recognition</h3><p class="project-description">Voice-based recognition using Python. Real-time speech-to-text with NLP.</p><div class="project-tags"><span>Python</span><span>NLP</span><span>AI</span></div></div></div>
+                <div class="project-card reveal-up" style="--delay:0.4s"><div class="project-card-inner"><div class="project-card-shine"></div><div class="project-number">05</div><div class="project-header"><div class="project-icon"><i class="fas fa-book-open"></i></div><a href="https://github.com/devsingh95/our-story-dev-ishita" target="_blank" class="project-link"><i class="fab fa-github"></i></a></div><h3 class="project-title">Prepgram – Study Platform</h3><p class="project-description">Study-focused learning platform for topic discussions & academic engagement.</p><div class="project-tags"><span>Python</span><span>SQL</span><span>Full Stack</span></div></div></div>
+            </div>
+            <div class="github-stats reveal-up">
+                <div class="github-stats-header"><div class="github-icon-wrap"><i class="fab fa-github"></i></div><h3>GitHub Activity</h3></div>
+                <div class="github-stats-grid">
+                    <img src="https://github-readme-stats.vercel.app/api?username=devsingh95&show_icons=true&theme=transparent&hide_border=true&title_color=3B82F6&text_color=94a3b8&icon_color=22D3EE&bg_color=00000000" alt="GitHub Stats" loading="lazy">
+                    <img src="https://github-readme-streak-stats.herokuapp.com/?user=devsingh95&theme=transparent&hide_border=true&ring=3B82F6&fire=22D3EE&currStreakLabel=3B82F6&sideLabels=94a3b8&dates=64748b&background=00000000" alt="GitHub Streak" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <div class="section-title-wrapper">
+                    <h2 class="section-title reveal-text">Work <span class="gradient-text">Experience</span></h2>
+                    <div class="section-line-animated"><div class="line-fill"></div></div>
+                </div>
+            </div>
+            <div class="exp-timeline">
+                <div class="exp-timeline-line"><div class="exp-timeline-line-fill" id="timelineFill"></div></div>
+                <div class="exp-item reveal-left">
+                    <div class="exp-marker"><div class="exp-marker-dot"></div><div class="exp-marker-ring"></div></div>
+                    <div class="exp-card">
+                        <div class="exp-card-accent"></div>
+                        <div class="exp-date-badge"><i class="fas fa-calendar-alt"></i> Jul 2025 – Jan 2026</div>
+                        <h3 class="exp-title">Full-Stack Project Contributor</h3>
+                        <h4 class="exp-company"><i class="fas fa-building"></i> Prepgram – Academic Project</h4>
+                        <div class="exp-tech"><span>Python</span><span>SQL</span><span>Backend Logic</span></div>
+                        <ul class="exp-details">
+                            <li>Collaborated with <strong>2 full-stack developers</strong> to build a study-focused social learning platform.</li>
+                            <li>Designed backend logic, data flow, and database structures for chat-based discussions.</li>
+                            <li>Built interaction flows to reduce unproductive scrolling and improve engagement.</li>
+                            <li>Participated in feature planning, implementation, and code reviews.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exp-item reveal-right">
+                    <div class="exp-marker"><div class="exp-marker-dot"></div><div class="exp-marker-ring"></div></div>
+                    <div class="exp-card">
+                        <div class="exp-card-accent"></div>
+                        <div class="exp-date-badge"><i class="fas fa-calendar-alt"></i> Apr 2025 – Oct 2025</div>
+                        <h3 class="exp-title">Data Analysis & ML Project</h3>
+                        <h4 class="exp-company"><i class="fas fa-flask"></i> Academic Research</h4>
+                        <div class="exp-tech"><span>Python</span><span>Pandas</span><span>NumPy</span><span>ML</span></div>
+                        <ul class="exp-details">
+                            <li>Performed data cleaning and preprocessing on structured datasets.</li>
+                            <li>Conducted EDA to identify trends and patterns.</li>
+                            <li>Implemented ML models for prediction and classification tasks.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section class="section certifications" id="certifications">
+        <div class="section-bg-accent"></div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <div class="section-title-wrapper">
+                    <h2 class="section-title reveal-text">Awards & <span class="gradient-text">Certifications</span></h2>
+                    <div class="section-line-animated"><div class="line-fill"></div></div>
+                </div>
+            </div>
+            <div class="cert-grid">
+                <div class="cert-card reveal-up" style="--delay:0s"><div class="cert-card-inner"><div class="cert-card-border"></div><div class="cert-ribbon">95.50%</div><div class="cert-icon-wrap cert-ibm"><i class="fas fa-award"></i></div><div class="cert-info"><span class="cert-provider">IBM &bull; Coursera 2024</span><h3>Python for Data Science & AI</h3><p>Python programming, data handling, AI & ML foundations.</p></div><div class="cert-score-bar"><div class="cert-bar-fill" data-width="95.5%"></div></div></div></div>
+                <div class="cert-card reveal-up" style="--delay:0.15s"><div class="cert-card-inner"><div class="cert-card-border"></div><div class="cert-ribbon cert-ribbon-gold">100%</div><div class="cert-icon-wrap cert-google"><i class="fas fa-chart-line"></i></div><div class="cert-info"><span class="cert-provider">Google &bull; Coursera 2024</span><h3>Data Analytics Capstone</h3><p>End-to-end data analysis case study with insights.</p></div><div class="cert-score-bar"><div class="cert-bar-fill" data-width="100%"></div></div></div></div>
+                <div class="cert-card reveal-up" style="--delay:0.3s"><div class="cert-card-inner"><div class="cert-card-border"></div><div class="cert-ribbon cert-ribbon-bronze">81.80%</div><div class="cert-icon-wrap cert-uni"><i class="fas fa-microchip"></i></div><div class="cert-info"><span class="cert-provider">U of Illinois &bull; Coursera 2024</span><h3>IoT Devices</h3><p>Connected devices fundamentals & system-level concepts.</p></div><div class="cert-score-bar"><div class="cert-bar-fill" data-width="81.8%"></div></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">06</span>
+                <div class="section-title-wrapper">
+                    <h2 class="section-title reveal-text">Get In <span class="gradient-text">Touch</span></h2>
+                    <div class="section-line-animated"><div class="line-fill"></div></div>
+                </div>
+                <p class="section-subtitle">Have a project in mind? Let's build something amazing together.</p>
+            </div>
+            <div class="contact-layout">
+                <div class="contact-left reveal-left">
+                    <div class="contact-big-text"><span>LET'S</span><span class="gradient-text">CONNECT</span></div>
+                    <div class="contact-cards-stack">
+                        <a href="mailto:devsingh95577@gmail.com" class="contact-card magnetic"><div class="contact-card-icon"><i class="fas fa-envelope"></i></div><div class="contact-card-info"><span class="contact-label">Email</span><span class="contact-value">devsingh95577@gmail.com</span></div><i class="fas fa-arrow-up-right-from-square contact-card-arrow"></i></a>
+                        <a href="https://www.linkedin.com/in/dev-singh-aba1a4263" target="_blank" class="contact-card magnetic"><div class="contact-card-icon" style="--card-color:#0A66C2"><i class="fab fa-linkedin-in"></i></div><div class="contact-card-info"><span class="contact-label">LinkedIn</span><span class="contact-value">linkedin.com/in/dev-singh-aba1a4263</span></div><i class="fas fa-arrow-up-right-from-square contact-card-arrow"></i></a>
+                        <a href="https://github.com/devsingh95" target="_blank" class="contact-card magnetic"><div class="contact-card-icon" style="--card-color:#8B5CF6"><i class="fab fa-github"></i></div><div class="contact-card-info"><span class="contact-label">GitHub</span><span class="contact-value">github.com/devsingh95</span></div><i class="fas fa-arrow-up-right-from-square contact-card-arrow"></i></a>
+                        <a href="tel:+918279030796" class="contact-card magnetic"><div class="contact-card-icon" style="--card-color:#22C55E"><i class="fas fa-phone"></i></div><div class="contact-card-info"><span class="contact-label">Phone</span><span class="contact-value">+91-82790 30796</span></div><i class="fas fa-arrow-up-right-from-square contact-card-arrow"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right reveal-right">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-header"><h3>Send a Message</h3><p>I'll get back to you soon.</p></div>
+                        <div class="form-row">
+                            <div class="form-group"><input type="text" id="formName" placeholder=" " required><label for="formName"><i class="fas fa-user"></i> Name</label><div class="form-glow"></div></div>
+                            <div class="form-group"><input type="email" id="formEmail" placeholder=" " required><label for="formEmail"><i class="fas fa-at"></i> Email</label><div class="form-glow"></div></div>
+                        </div>
+                        <div class="form-group"><textarea id="formMessage" rows="5" placeholder=" " required></textarea><label for="formMessage"><i class="fas fa-message"></i> Message</label><div class="form-glow"></div></div>
+                        <button type="submit" class="btn btn-primary btn-submit magnetic"><span class="btn-text">Send Message</span><span class="btn-icon"><i class="fas fa-paper-plane"></i></span><span class="btn-shine"></span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-glow"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-top">
+                    <div class="footer-brand"><div class="footer-logo"><span class="logo-bracket">&lt;</span>Dev<span class="logo-dot">.</span>Singh<span class="logo-bracket">/&gt;</span></div><p class="footer-tagline">"Turning Logic into Scalable Intelligent Systems."</p></div>
+                    <div class="footer-nav"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
+                    <div class="footer-socials">
+                        <a href="https://github.com/devsingh95" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/dev-singh-aba1a4263" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:devsingh95577@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-divider"></div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Dev Singh. Crafted with <span class="footer-heart">&hearts;</span> and clean code.</p>
+                    <a href="#hero" class="back-to-top magnetic"><i class="fas fa-arrow-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
